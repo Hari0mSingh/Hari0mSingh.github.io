@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HariHax (Hariom Singh) — Offensive Security Consultant. Web & API Penetration Testing, AI/LLM Red Teaming, Security Research.">
+    <meta name="description" content="HariHax (Hari om) — Offensive Security Consultant. Web & API Penetration Testing, AI/LLM Red Teaming, Security Research.">
     <meta property="og:title" content="HariHax — Offensive Security">
     <meta property="og:description" content="Web & API Pentester · AI Red Teamer · Security Researcher">
     <link rel="icon" type="image/png" href="/favicon-32.png">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hari0msingh.github.io/">
+    <meta property="og:image" content="https://hari0msingh.github.io/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HariHax — Offensive Security">
+    <meta name="twitter:description" content="Web & API Pentester · AI/LLM Red Teamer · Security Researcher">
+    <meta name="twitter:image" content="https://hari0msingh.github.io/og.png">
     <title>HariHax — Offensive Security</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -154,7 +160,7 @@
             inset: 0;
             background-image: radial-gradient(circle, rgba(59,130,246,0.08) 1px, transparent 1px);
             background-size: 32px 32px;
-            mask-image: radial-gradient(ellipse 75% 80% at 75% 45%, black, transparent);
+            mask-image: radial-gradient(ellipse 70% 75% at 50% 45%, black, transparent);
             pointer-events: none;
         }
 
@@ -162,8 +168,9 @@
         .hero-wrap::after {
             content: '';
             position: absolute;
-            top: 20%; right: 5%;
-            width: 400px; height: 400px;
+            top: 15%; left: 50%;
+            margin-left: -260px;
+            width: 520px; height: 520px;
             background: radial-gradient(circle, rgba(139,92,246,0.12), transparent 65%);
             filter: blur(40px);
             animation: float 8s ease-in-out infinite;
@@ -181,13 +188,15 @@
             padding: 8rem 2rem 4rem;
             display: flex;
             align-items: center;
-            gap: 4rem;
+            justify-content: center;
             width: 100%;
             position: relative;
             z-index: 2;
         }
 
-        .hero-content { flex: 1; }
+        .hero-content { max-width: 720px; text-align: center; }
+        .hero-bio { margin-left: auto; margin-right: auto; }
+        .hero-ctas { justify-content: center; }
 
         .status-badge {
             display: inline-flex;
@@ -296,7 +305,6 @@
         .btn-secondary:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
 
         /* ── TERMINAL CARD (hero visual) ── */
-        .hero-visual { flex-shrink: 0; width: 380px; }
 
         .term {
             background: var(--surface);
@@ -839,8 +847,7 @@
 
         /* ── RESPONSIVE ── */
         @media (max-width: 860px) {
-            .hero-inner { flex-direction: column; text-align: center; padding-top: 7rem; gap: 2.5rem; }
-            .hero-visual { width: 100%; max-width: 400px; }
+            .hero-inner { padding-top: 7rem; }
             .hero-ctas { justify-content: center; }
             .about-grid { grid-template-columns: 1fr; }
             .stat-row { justify-content: center; }
@@ -869,6 +876,7 @@
     <ul class="nav-links">
         <li><a href="#about">about</a></li>
         <li><a href="#experience">experience</a></li>
+        <li><a href="#bounty">bounty</a></li>
         <li><a href="#skills">skills</a></li>
         <li><a href="#certs">certs</a></li>
         <li><a href="#content">content</a></li>
@@ -881,7 +889,7 @@
     <div class="hero-inner">
         <div class="hero-content">
             <div class="status-badge"><span class="status-dot"></span> Open to opportunities</div>
-            <div class="hero-handle"><span class="c">$</span> whoami // Hariom Singh</div>
+            <div class="hero-handle"><span class="c">$</span> whoami // Hari om</div>
             <h1 class="hero-name">HariHax</h1>
             <div class="hero-roles"><span class="typed" id="typed"></span><span class="tcursor"></span></div>
             <p class="hero-bio">
@@ -894,27 +902,7 @@
                 <a href="#content" class="btn-secondary">Research & Writeups</a>
             </div>
         </div>
-        <div class="hero-visual">
-            <div class="term">
-                <div class="term-bar">
-                    <span class="term-dot r"></span>
-                    <span class="term-dot y"></span>
-                    <span class="term-dot g"></span>
-                    <span class="term-title">harihax@offsec:~</span>
-                </div>
-                <div class="term-body">
-                    <div><span class="prompt">➜</span> <span class="cmd">cat profile.json</span></div>
-                    <div class="out">{</div>
-                    <div class="out">&nbsp;&nbsp;<span class="key">"role"</span>: <span class="val">"Security Consultant"</span>,</div>
-                    <div class="out">&nbsp;&nbsp;<span class="key">"focus"</span>: [<span class="val">"web"</span>, <span class="val">"api"</span>, <span class="val">"ai"</span>],</div>
-                    <div class="out">&nbsp;&nbsp;<span class="key">"certs"</span>: <span class="val">"eJPT, CRTA, eWPTX"</span>,</div>
-                    <div class="out">&nbsp;&nbsp;<span class="key">"next"</span>: <span class="val">"HTB COAE"</span>,</div>
-                    <div class="out">&nbsp;&nbsp;<span class="key">"status"</span>: <span class="hl">"hunting"</span></div>
-                    <div class="out">}</div>
-                    <div><span class="prompt">➜</span> <span class="cmd">./run_assessment.sh</span> <span class="tcursor"></span></div>
-                </div>
-            </div>
-        </div>
+    </div>
     </div>
 </div>
 
@@ -942,7 +930,7 @@
                 <div class="focus-num">03</div>
                 <div class="focus-icon">🎯</div>
                 <div class="focus-name">Bug Hunting</div>
-                <div class="focus-desc">Hunting on self-hosted public programs using real-world web & API attack chains.</div>
+                <div class="focus-desc">Paid findings on public programs — template injection to account takeover, cross-tenant access control.</div>
             </div>
             <div class="focus-item">
                 <div class="focus-num">04</div>
@@ -956,7 +944,7 @@
             <div class="about-text">
                 <p>
                     I'm a Technical Consultant at <strong>CyRAACS</strong>, where I run web application,
-                    API, network, and Active Directory security assessments across fintech and enterprise
+                    API, and network infrastructure security assessments across fintech and enterprise
                     environments.
                 </p>
                 <p>
@@ -971,16 +959,16 @@
                 </p>
                 <div class="stat-row">
                     <div class="stat">
-                        <div class="stat-num" data-count="50" data-suffix="+">0</div>
-                        <div class="stat-label">Web & API Assessments</div>
+                        <div class="stat-num" data-count="2" data-suffix="+">0</div>
+                        <div class="stat-label">Years in Security</div>
                     </div>
                     <div class="stat">
                         <div class="stat-num" data-count="3" data-suffix="">0</div>
                         <div class="stat-label">Certifications</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-num" data-count="2" data-suffix="+">0</div>
-                        <div class="stat-label">Years in Security</div>
+                        <div class="stat-num" data-count="2" data-suffix="">0</div>
+                        <div class="stat-label">Paid Bounty Findings</div>
                     </div>
                 </div>
             </div>
@@ -996,21 +984,21 @@
                     <div class="ac-icon">🤖</div>
                     <div>
                         <div class="ac-title">AI / LLM Red Teaming</div>
-                        <div class="ac-desc">Prompt injection, jailbreaking, RAG pipeline attacks, agentic abuse. Pursuing HTB COAE.</div>
+                        <div class="ac-desc">Prompt injection, jailbreaking, RAG pipeline attacks, agentic abuse.</div>
                     </div>
                 </div>
                 <div class="about-card">
                     <div class="ac-icon">🏗️</div>
                     <div>
-                        <div class="ac-title">Network, AD & Infra</div>
-                        <div class="ac-desc">Internal/external network PT, AD assessments, firewall & secure config reviews (CIS / STIG).</div>
+                        <div class="ac-title">Network & Infrastructure</div>
+                        <div class="ac-desc">Internal and external network penetration testing, segmentation testing, service enumeration, misconfiguration analysis.</div>
                     </div>
                 </div>
                 <div class="about-card">
-                    <div class="ac-icon">☁️</div>
+                    <div class="ac-icon">🎯</div>
                     <div>
-                        <div class="ac-title">Cloud Security</div>
-                        <div class="ac-desc">Cloud fundamentals & security basics — IAM misconfigs, exposed services, cloud recon.</div>
+                        <div class="ac-title">Bug Bounty & Research</div>
+                        <div class="ac-desc">Paid findings on public programs. Full technical write-ups published — including the attempts that failed.</div>
                     </div>
                 </div>
             </div>
@@ -1033,13 +1021,14 @@
                 </div>
                 <div class="exp-company">CyRAACS Services Private Limited · Bengaluru, Karnataka</div>
                 <ul class="exp-points">
-                    <li>Conducted 50+ web application and API penetration tests across fintech and enterprise platforms using black-box and gray-box methodologies.</li>
-                    <li>Identified and validated critical vulnerabilities — IDOR, SSRF, SQLi, XSS, CSRF, authentication flaws, and authorization bypasses affecting business-critical functionality.</li>
-                    <li>Assessed REST and GraphQL APIs for authentication, authorization, input validation, and business logic vulnerabilities beyond automated scanner coverage.</li>
-                    <li>Performed internal and external network penetration testing and Active Directory assessments — enumeration, privilege escalation, lateral movement, and misconfiguration analysis.</li>
-                    <li>Ran secure configuration reviews for VDI environments, Windows endpoints, and network devices aligned with CIS and STIG benchmarks.</li>
-                    <li>Built automation in Python, PowerShell, and Bash to streamline recon, enumeration, and vulnerability validation workflows.</li>
-                    <li>Mentored junior analysts and interns on web app testing, vulnerability validation, and technical reporting.</li>
+                    <li>Delivered web application and API penetration tests across fintech, SaaS, and enterprise platforms using black-box and gray-box methodologies.</li>
+                    <li>Tested to the OWASP Web Security Testing Guide, OWASP Top 10, and OWASP API Security Top 10 — authentication, session management, access control, input validation, and business logic.</li>
+                    <li>Identified and validated critical and high severity vulnerabilities — SSTI leading to RCE, SSRF, SQL injection, stored XSS, and authorization bypasses in production applications.</li>
+                    <li>Assessed REST and GraphQL APIs for broken object-level authorization (IDOR/BOLA), broken function-level authorization, and business logic flaws automated scanners miss.</li>
+                    <li>Tested AI/LLM-integrated applications — chatbot features and an agent creation and management platform — covering prompt injection, agent and tool abuse, and authorization on AI-driven functionality.</li>
+                    <li>Conducted internal and external network infrastructure penetration testing and network segmentation testing.</li>
+                    <li>Reported findings with working proofs of concept and business impact framing, and supported development teams through remediation and retesting.</li>
+                    <li>Built automation in Python, PowerShell, and Bash for recon and vulnerability validation; mentored junior analysts and interns.</li>
                 </ul>
             </div>
 
@@ -1060,10 +1049,52 @@
     </div>
 </div>
 
-<!-- SKILLS -->
-<div class="sw" id="skills">
+<!-- BUG BOUNTY -->
+<div class="sw" id="bounty">
     <div class="si">
-        <div class="section-label">03 / arsenal</div>
+        <div class="section-label">03 / bug bounty</div>
+        <h2 class="section-title">Findings & Write-ups</h2>
+        <div class="section-rule"></div>
+        <div class="exp-list fi">
+
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div class="exp-role">Server-Side Template Injection → Account Takeover</div>
+                    <span class="exp-date">Paid · Public Program</span>
+                </div>
+                <div class="exp-company">Subscription billing SaaS platform</div>
+                <ul class="exp-points">
+                    <li>Three attempts at code execution went nowhere. One template expression that simply read a variable leaked an authentication token.</li>
+                    <li>Chained the leaked token into full customer account takeover on the billing portal.</li>
+                </ul>
+                <div style="margin-top:1.1rem">
+                    <a href="https://medium.com/@HariHax/everyone-chains-ssti-to-rce-i-chained-it-to-account-takeover-c279188ff9ce" target="_blank" rel="noopener" class="content-link">Read the full write-up →</a>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div class="exp-role">Cross-Tenant Broken Access Control</div>
+                    <span class="exp-date">Paid · Public Program</span>
+                </div>
+                <div class="exp-company">E-commerce SaaS platform</div>
+                <ul class="exp-points">
+                    <li>The authorization check and the object lookup relied on different request parameters — the app verified one identity and served another.</li>
+                    <li>Enabled data access across customer tenants. Started from a 400 response that looked like a dead end.</li>
+                </ul>
+                <div style="margin-top:1.1rem">
+                    <a href="https://medium.com/@HariHax/a-400-is-not-a-dead-end-my-first-bug-bounty-250-0fd813c24f55" target="_blank" rel="noopener" class="content-link">Read the full write-up →</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- SKILLS -->
+<div class="sw alt" id="skills">
+    <div class="si">
+        <div class="section-label">04 / arsenal</div>
         <h2 class="section-title">Technical Stack</h2>
         <div class="section-rule"></div>
         <div class="skills-grid fi">
@@ -1076,6 +1107,7 @@
                     <span class="tag">SQL Injection</span>
                     <span class="tag">XSS / CSRF</span>
                     <span class="tag">SSRF</span>
+                    <span class="tag">SSTI → RCE</span>
                     <span class="tag">IDOR / BOLA</span>
                     <span class="tag">BFLA</span>
                     <span class="tag">Auth Bypass</span>
@@ -1104,18 +1136,16 @@
             </div>
 
             <div class="skill-cat">
-                <div class="skill-cat-label net">Network / AD / Infra</div>
+                <div class="skill-cat-label net">Network & Infrastructure</div>
                 <div class="tags">
                     <span class="tag net">Nmap</span>
                     <span class="tag net">Nessus Expert</span>
                     <span class="tag net">Metasploit</span>
                     <span class="tag net">Wireshark</span>
-                    <span class="tag net">Active Directory</span>
-                    <span class="tag net">BloodHound</span>
-                    <span class="tag net">Impacket</span>
-                    <span class="tag net">Firewall Audits</span>
-                    <span class="tag net">CIS / STIG</span>
-                    <span class="tag net">Wi-Fi PT</span>
+                    <span class="tag net">Internal / External PT</span>
+                    <span class="tag net">Segmentation Testing</span>
+                    <span class="tag net">Service Enumeration</span>
+                    <span class="tag net">Misconfiguration Analysis</span>
                 </div>
             </div>
 
@@ -1141,9 +1171,9 @@
 </div>
 
 <!-- CERTS + PROJECTS -->
-<div class="sw alt" id="certs">
+<div class="sw" id="certs">
     <div class="si">
-        <div class="section-label">04 / credentials</div>
+        <div class="section-label">05 / credentials</div>
         <h2 class="section-title">Certifications & Projects</h2>
         <div class="section-rule"></div>
 
@@ -1166,16 +1196,10 @@
                 <div class="cert-org">Web App Pentester eXtreme · INE Security</div>
                 <span class="cert-date">May 2026</span>
             </div>
-            <div class="cert-card wip">
-                <span class="cert-icon">🤖</span>
-                <div class="cert-name">COAE</div>
-                <div class="cert-org">Certified Offensive AI Expert · Hack The Box</div>
-                <span class="cert-date wip">In Progress</span>
-            </div>
         </div>
 
         <div class="sub-title fi">Projects</div>
-        <a href="https://github.com/Hari0mSingh" target="_blank" class="proj-card fi">
+        <a href="https://github.com/Hari0mSingh/NetInspector-PortScanner" target="_blank" rel="noopener" class="proj-card fi">
             <div class="proj-icon">🔭</div>
             <div>
                 <div class="proj-name">NetInspector — Network Port Scanner <span class="arrow">↗</span></div>
@@ -1192,9 +1216,9 @@
 </div>
 
 <!-- CONTENT / RESEARCH -->
-<div class="sw" id="content">
+<div class="sw alt" id="content">
     <div class="si">
-        <div class="section-label">05 / content</div>
+        <div class="section-label">06 / content</div>
         <h2 class="section-title">Research & Writeups</h2>
         <div class="section-rule"></div>
 
@@ -1203,8 +1227,9 @@
                 <div class="content-icon med">📝</div>
                 <div class="content-title">Medium</div>
                 <div class="content-sub">
-                    Technical writeups on web & API vulnerabilities, AI/LLM attack techniques,
-                    and offensive security research. Deep dives, methodology, and real findings.
+                    Full technical write-ups of real findings — complete attack chains,
+                    including the attempts that failed. Web & API vulnerabilities, AI/LLM
+                    attack techniques, and offensive security research.
                 </div>
                 <span class="content-link">Read on Medium →</span>
             </a>
@@ -1225,7 +1250,6 @@
                 <span class="ptag a">AI / LLM Security</span>
                 <span class="ptag b">Prompt Injection</span>
                 <span class="ptag b">API Attack Chains</span>
-                <span class="ptag a">Claude Code + Burp Workflow</span>
                 <span class="ptag b">Business Logic Flaws</span>
                 <span class="ptag a">Self-Hosted BB Methodology</span>
                 <span class="ptag b">Recon Automation</span>
@@ -1236,9 +1260,9 @@
 </div>
 
 <!-- CONTACT -->
-<div class="sw alt" id="contact">
+<div class="sw" id="contact">
     <div class="si">
-        <div class="section-label">06 / contact</div>
+        <div class="section-label">07 / contact</div>
         <h2 class="section-title">Get In Touch</h2>
         <div class="section-rule"></div>
         <div class="contact-center fi">
@@ -1288,7 +1312,7 @@
         ['[ <span class="ok">OK</span> ] initializing harihax.sh', 60],
         ['[ <span class="ok">OK</span> ] loading modules: <span class="val">web · api · ai</span>', 90],
         ['[ <span class="ok">OK</span> ] mounting recon toolkit', 70],
-        ['[ <span class="ok">OK</span> ] auth: <span class="val">Hariom Singh</span> verified', 90],
+        ['[ <span class="ok">OK</span> ] auth: <span class="val">Hari om</span> verified', 90],
         ['<span class="val">→ launching profile...</span>', 120]
     ];
 
